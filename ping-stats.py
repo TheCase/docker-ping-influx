@@ -26,11 +26,6 @@ def hit(addr,timeout=1,count=1,packet_size=128):
   influx(addr, 'max',  res[1])
   influx(addr, 'avg',  res[2])
 
-counter = 0
-poll_interval = int(os.getenv('POLL_INTERVAL', 2))
-while counter < int(os.getenv('RUNTIME_SECS', 60)):
-   targets = os.environ['TARGETS']
-   for target in targets.split( ):
-       hit(target)
-   counter += poll_interval
-   time.sleep(poll_interval)
+targets = os.environ['TARGETS']
+for target in targets.split( ):
+   hit(target)

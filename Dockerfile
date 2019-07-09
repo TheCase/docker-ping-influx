@@ -13,4 +13,7 @@ ENV INFLUXUSER root
 ENV INFLUXPASS root
 ENV INFLUXDB   ping 
 
-CMD [ "python", "ping-stats.py" ]
+# time between pings in seconds
+ENV POLL_INTERVAL 2  
+
+CMD [ "python", "ping-influx.py" ]

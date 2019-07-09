@@ -15,5 +15,6 @@ ENV INFLUXDB   ping
 
 # time between pings in seconds
 ENV POLL_INTERVAL 2  
+ENV RUNTIME_SECS 60  
 
-CMD [ "python", "ping-influx.py" ]
+CMD [ "python", "ping-stats.py" ]

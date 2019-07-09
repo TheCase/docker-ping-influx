@@ -26,8 +26,6 @@ def hit(addr,timeout=1,count=1,packet_size=128):
   influx(addr, 'max',  res[1])
   influx(addr, 'avg',  res[2])
 
-while True:
-   targets = os.environ['TARGETS']
-   for target in targets.split( ):
-       hit(target)
-   time.sleep(int(os.environ['POLL_INTERVAL']))
+targets = os.environ['TARGETS']
+for target in targets.split( ):
+   hit(target)

@@ -9,7 +9,7 @@ Sends ping results to an InfluxDB (v1) server
 | INFLUXHOST | influxdb host | "localhost" |
 | INFLUXPORT | influxdb port | 8086 |
 | INFLUXDB | influxdb database | "ping" |
-| POLL_INTERVAL | interval, in seconds | 60 |
+| POLL_INTERVAL | interval, in seconds | 10 |
 | TARGETS | space separated string of hostnames/IPs to ping | n/a |
 
 ## command line example
@@ -30,7 +30,6 @@ services:
       INFLUXHOST: "influx.local"
       INFLUXPORT: 8086
       INFLUXDB: "pings"
-      POLL_INTERVAL: 60
       TARGETS: "somehost.local otherhost.local"
     restart: always
 ```

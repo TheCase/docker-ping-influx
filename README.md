@@ -14,7 +14,9 @@ Sends ping results to an InfluxDB (v1) server
 
 ## command line example
 
+```bash
 docker run -d -e TARGETS='google.com yahoo.com' --restart=always --name ping thecase/ping-influx
+```			
 
 ## docker-compose example
 

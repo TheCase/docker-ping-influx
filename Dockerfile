@@ -12,8 +12,6 @@ ENV INFLUXPORT 8086
 ENV INFLUXUSER root
 ENV INFLUXPASS root
 ENV INFLUXDB   ping 
-
-# time between pings in seconds
-ENV POLL_INTERVAL 2  
+ENV POLL_INTERVALs 10  
 
 CMD [ "python", "ping-influx.py" ]

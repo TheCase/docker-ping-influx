@@ -1,0 +1,12 @@
+services:
+
+  ping-recorder:
+    image: thecase/ping-influx
+    container_name: ping-recorder
+    environment:
+      INFLUXHOST: "influx.local"
+      INFLUXPORT: 8086
+      INFLUXDB: "pings"
+      POLL_INTERVAL: 60
+      TARGETS: "somehost.local, otherhost.local"
+    restart: always
